@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refaccionaria Sucursal Ecatepec</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/Styles.css">
+</head>
+<style>
+    .mensaje-carrito {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 1000;
+        animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+    }
+    
+    .contador-carrito {
+        display: inline-block;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    
+    @keyframes fadeOut {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+</style>
+</head>
+<body>
+<div class="container__header">
+    <div class="title">
+        <a href="/html/index.html">Refaccionaria Sucursal Ecatepec</a>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <nav class="nav__inicio-carrito">
+        <ul class="nav--menu__inicio-carrito">
+            <li><a href="/html/registro/iniciar.html"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
+            <li>
+                <a href="/html/carrito/carrito.html">
+                    <i class="fas fa-shopping-cart"></i> Carrito
+                    <span class="contador-carrito" id="cuenta--carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="menu__container">
+    <nav class="nav--menu__principal">
+        <ul class="nav--menu">
+            <li><a href="/html/menu-productos/suspencion.html">Suspensiones</a></li>
+            <li><a href="/html/menu-productos/horqiollas.html">Horquillas</a></li>
+            <li><a href="/html/menu-productos/cosfres.html">Cofres</a></li>
+            <li>Más...
+                <ul class="sub--menu">
+                    <li><a href="#">Balatas</a></li>
+                    <li><a href="#">Amortiguador</a></li>
+                    <li><a href="#">Llantas</a></li>
+                    <li><a href="#">Bujias</a></li>
+                    <li><a href="#">frenos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="position"></div>
+    </div>
+</div>
+
+<div class="productos__inicio--container">
+        <div class="productos__cards" id="productos__cards">
+            <a href="/html/productos/suspencion.html">
+                <div class="img__productos">
+                    <img src="/img/suspencion.png" alt="Producto">
+                </div>
+                <div class="info__producto">
+                    <h3 class="sub-title">
+                        Kit Suspension Para Peugeot 206 Lado Izquierdo Conductor
+                    </h3>
+                </div>
+            </a>
+            <div class="precio-producto">
+                <span>MX$1,659</span>
+            </div>
+            <button class="boton-agregar"
+                    data-id="2"
+                    data-nombre="Kit Suspension Para Peugeot 206 Lado Izquierdo Conductor"
+                    data-precio="1659.00"
+                    data-imagen="/img/suspencion.png">Agregar al carrito</button>
+        </div>
+
+        <div class="productos__cards">
+            <a href="/html/productos/horqulla.html">
+                <div class="img__productos">
+                    <img src="/img/horquilla.png" alt="Producto">
+                </div>
+                <div class="info__producto">
+                    <h3 class="sub-title">Horquilla de suspensión delantera para Peugeot</h3>
+                </div>
+            </a>
+            <div class="precio-producto">
+                <span>MX$100.00</span>
+            </div>
+            <button class="boton-agregar"
+                    data-id="3"
+                    data-nombre="Horquilla de suspensión delantera para Peugeot"
+                    data-precio="100.00"
+                    data-imagen="/img/horquilla.png">Agregar al carrito</button>
+        </div>
+
+        <div class="productos__cards">
+            <a href="/html/productos/base.html">
+                <div class="img__productos">
+                    <img src="/img/base.png" alt="Producto">
+                </div>
+                <div class="info__producto">
+                    <h3 class="sub-title">Kit 2 Bases Amortiguador Delanteras Peugeot 207, 208, 301</h3>
+                </div>
+            </a>
+            <div class="precio-producto">
+                <span>MX$100.00</span>
+            </div>
+            <button class="boton-agregar"
+                    data-id="1"
+                    data-nombre="Kit 2 Bases Amortiguador Delanteras Peugeot 207, 208, 301"
+                    data-precio="100.00"
+                    data-imagen="/img/base.png">Agregar al carrito</button>
+        </div>
+
+        <!-- Agregar atributos data a todos tus botones "Comprar" y cambiarlos a "Agregar al carrito" -->
+        <div class="productos__cards">
+            <a href="/html/productos/soporte.html">
+                <div class="img__productos">
+                    <img src="/img/soporte.png" alt="Producto">
+                </div>
+                <div class="info__producto">
+                    <h3 class="sub-title">Kit 3 Soportes Motor/trans Peugeot 206 1.4/1.6l 2003 Al 2009</h3>
+                </div>
+            </a>
+            <div class="precio-producto">
+                <span>MX$100.00</span>
+            </div>
+            <button class="boton-agregar"
+                    data-id="4"
+                    data-nombre="Kit 3 Soportes Motor/trans Peugeot 206 1.4/1.6l 2003 Al 2009"
+                    data-precio="100.00"
+                    data-imagen="/img/soporte.png">Agregar al carrito</button>
+        </div>
+
+        <!-- Hacer lo mismo para todos los productos -->
+        <!-- ... más productos ... -->
+</div>
+
+<footer class="footer__container">
+    <!-- Tu contenido del footer -->
+</footer>
+
+<!-- Agregar la referencia al script al final del body -->
+<script src="/js/carrito/carrito.js"></script>
+</body>
+</html>

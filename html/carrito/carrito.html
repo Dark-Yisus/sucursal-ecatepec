@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/carrito/carrito.css">
+    <style>
+        .carrito-vacio {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #777;
+        }
+        .contador-carrito {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="/html/index.html" class="header__logo">Refaccionaria Sucursal Ecatepec</a>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/html/registro/iniciar.html">
+                            <i class="fas fa-user"></i>
+                            Iniciar Sesión
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/carrito/carrito.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            Carrito
+                            <span class="contador-carrito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="categories">
+        <div class="categories__container">
+            <ul class="categories__list">
+                <li><a href="#">Suspensiones</a></li>
+                <li><a href="#">Horquillas</a></li>
+                <li><a href="#">Cofres</a></li>
+                <li><a href="#">Más...</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <section class="cart-section">
+            <div class="cart-header">
+                <h2 class="cart-title">Carrito de Compras</h2>
+                <button class="empty-cart-btn">
+                    <i class="fas fa-trash"></i>
+                    Vaciar carrito
+                </button>
+            </div>
+
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unit.</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los elementos del carrito se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="summary-section">
+            <h3 class="summary-title">Resumen de Compra</h3>
+            
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Envío</span>
+                <span>$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Seguro de envío</span>
+                <span>$0.00</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Total (IVA Incluido)</span>
+                <span>$0.00</span>
+            </div>
+
+            <div class="bill-type">
+                <h4>Tipo de Comprobante</h4>
+                <select>
+                    <option value="ticket">Ticket</option>
+                    <option value="factura">Factura</option>
+                </select>
+                <p>Seleccione Ticket para comprobante de garantía o Factura para declaración de impuestos.</p>
+            </div>
+
+            <button class="checkout-btn">Continuar con la Compra</button>
+        </section>
+    </main>
+    
+    <!-- Agregar la referencia al script al final del body -->
+    <script src="/js/carrito/carrito.js"></script>
+</body>
+</html>
